@@ -17,12 +17,12 @@ export default function Skills() {
                 ].map((skill) => (
                     <div
                         key={skill}
-                        className="flex flex-col items-center justify-center p-5 border border-gray-600 rounded-lg"
+                        className="flex flex-col items-center justify-center p-5 border border-gray-600 rounded-lg hover:shadow-lg transition-shadow duration-300"
                     >
                         <img
                             src={`./images/${skill.toLowerCase()}.png`}
                             alt={skill}
-                            className="h-16 w-16 mb-4"
+                            className="h-16 w-16 mb-4 transform transition-transform duration-300 hover:scale-125"
                         />
                         <p className="text-lg font-bold">{skill}</p>
                     </div>

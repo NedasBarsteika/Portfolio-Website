@@ -11,7 +11,7 @@ export default function Header() {
                 <p className="text-xl italic">- Full-stack Developer -</p>
                 <div className="mt-5">
                     <Button title="CV" link=""/>
-                    <Button title="Contact Me" link=""/>
+                    <Button title="Contact Me" link="#contact-me"/>
                 </div>
             </div>
         </header>
