@@ -1,12 +1,8 @@
 import './App.css';
 import { motion } from 'framer-motion';
-import Navbar from './components/navbar';
-import Header from './components/header'
-import AboutMe from './components/about-me';
-import Skills from './components/skills';
-import Projects from './components/projects';
-import ContactMe from './components/contact-me';
-import Footer from './components/footer';
+import Main from './Pages/main';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ProjectPage from './Pages/ProjectPage';
 
 function App() {
   return (
@@ -17,13 +13,12 @@ function App() {
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}
       >
-        <Navbar />
-        <Header />
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <ContactMe />
-        <Footer />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/project/:id" element={<ProjectPage />} />
+          </Routes>
+        </Router>
       </motion.div>
     </div>
   );
