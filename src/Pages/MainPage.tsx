@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Button from "../components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com"
 
 const projectData = {
     1: { title: "Competence Form", description: "Competence form project made for the company Reiz Tech.", image: "./images/competence-form.png", codeLink: "https://github.com/NedasBarsteika/Competence-form" },
@@ -12,6 +13,9 @@ const projectData = {
 
 export default function Main() {
     const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [subject, setSubject] = useState('');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleSendMessage = (e: React.FormEvent) => {
@@ -20,10 +24,40 @@ export default function Main() {
             alert('Message cannot be empty!');
             return;
         }
+        if (email.trim() === '' || name.trim() === '' || subject.trim() === '') {
+            alert('Please input all the information');
+            return;
+        }
+        if (!email.includes('@')) {
+            alert('Invalid email address: Missing "@" symbol.');
+            return;
+        }
 
-        // Replace this alert with an actual backend email service
-        alert(`Message sent: ${message}`);
-        setMessage('');
+        const parms = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        }
+
+        emailjs
+        .send(
+            "service_6biin5b",
+            "template_z4lejpf",
+            parms, 
+            "E-KOkwKwHaxly0TKI"
+        )
+        .then(
+            (response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Message sent successfully!');
+                setMessage('');
+            },
+            (error) => {
+                console.error('FAILED...', error);
+                alert('Failed to send the message. Please try again later.');
+            }
+        );
     };
 
     const toggleMenu = () => {
@@ -232,15 +266,42 @@ export default function Main() {
 
                     {/* Message Box */}
                     <form onSubmit={handleSendMessage} className="flex flex-col gap-4">
+                        {/* Name Input */}
+                        <input
+                            type="text"
+                            className="w-full p-4 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
+                            placeholder="Your Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        {/* Email Input */}
+                        <input
+                            type="email"
+                            className="w-full p-4 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
+                            placeholder="Your Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        {/* Subject Input */}
+                        <input
+                            type="text"
+                            className="w-full p-4 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
+                            placeholder="Subject"
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                        />
+                        {/* Message Textarea */}
                         <textarea
-                            className="w-full h-40 p-4 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                            className="w-full h-40 p-4 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-black"
                             placeholder="Write your message here..."
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         />
+                        {/* Submit Button */}
                         <button
                             type="submit"
-                            className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition duration-200"
+                            className="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transform transition-transform duration-300 hover:scale-105"
+                            onClick={handleSendMessage}
                         >
                             Send Message
                         </button>

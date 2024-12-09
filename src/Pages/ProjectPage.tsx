@@ -35,7 +35,7 @@ const projectData = {
     image: "/images/portfolio-website.png",
     codeLink: "https://github.com/NedasBarsteika/Portfolio-Website",
     technologies: ["JavaScript", "React", "TypeScript"],
-    features: ["Modern design", "Form validation", "Message sending"],
+    features: ["Modern design", "Form validation", "Serverless message sending with EmailJS"],
   },
 };
 
