@@ -8,17 +8,17 @@ The website features modern design, form validation, serverless message sending 
 
 ## 🎯 Project features
 
-Modern design
-Animations
-Serverless email Sending with Emailjs
-Form validation
-CV downloading
+* Modern design
+* Animations
+* Serverless email Sending with Emailjs
+* Form validation
+* CV downloading
 
 # 🔧 Technologies used
 
-TypeScript
-React
-Tailwind
+* TypeScript
+* React
+* Tailwind
 
 ## Available Scripts
 

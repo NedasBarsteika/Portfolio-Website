@@ -41,23 +41,23 @@ export default function Main() {
         }
 
         emailjs
-        .send(
-            "service_6biin5b",
-            "template_z4lejpf",
-            parms, 
-            "E-KOkwKwHaxly0TKI"
-        )
-        .then(
-            (response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Message sent successfully!');
-                setMessage('');
-            },
-            (error) => {
-                console.error('FAILED...', error);
-                alert('Failed to send the message. Please try again later.');
-            }
-        );
+            .send(
+                "service_6biin5b",
+                "template_z4lejpf",
+                parms,
+                "E-KOkwKwHaxly0TKI"
+            )
+            .then(
+                (response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Message sent successfully!');
+                    setMessage('');
+                },
+                (error) => {
+                    console.error('FAILED...', error);
+                    alert('Failed to send the message. Please try again later.');
+                }
+            );
     };
 
     const toggleMenu = () => {
@@ -161,7 +161,7 @@ export default function Main() {
 
             {/* ABOUT ME */}
             <section id="about" className="py-20 px-10 mb-10">
-                <h2 className="text-4xl font-bold text-center underline decoration-red-500 mb-8">
+                <h2 className="text-4xl font-bold text-center underline decoration-red-500 underline-offset-8 mb-8">
                     About
                 </h2>
                 <p className="text-center text-lg max-w-4xl mx-auto mb-10">
@@ -177,7 +177,7 @@ export default function Main() {
 
             {/* SKILLS */}
             <section id="skills" className="py-20">
-                <h2 className="text-4xl font-bold text-center underline decoration-red-500 mb-8">
+                <h2 className="text-4xl font-bold text-center underline decoration-red-500 underline-offset-8 mb-8">
                     Skills
                 </h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-20">
@@ -208,7 +208,7 @@ export default function Main() {
 
             {/* PROJECTS */}
             <section id="projects" className="py-20 px-10">
-                <h2 className="text-4xl font-bold text-center underline decoration-red-500 mb-8">
+                <h2 className="text-4xl font-bold text-center underline decoration-red-500 underline-offset-8 mb-8">
                     Projects
                 </h2>
                 <div className="flex flex-col gap-12 max-w-5xl mx-auto mb-20 space-y-5">
@@ -250,7 +250,7 @@ export default function Main() {
 
             {/* CONTACT ME */}
             <section id="contact-me" className="py-20">
-                <h2 className="text-4xl font-bold text-center underline decoration-red-500 mb-8">
+                <h2 className="text-4xl font-bold text-center underline decoration-red-500 underline-offset-8 mb-8">
                     Contact Me
                 </h2>
                 <div className="max-w-4xl mx-auto">

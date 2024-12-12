@@ -103,7 +103,7 @@ export default function ProjectDetail() {
             Code
           </a>
 
-          <h2 className="text-2xl font-semibold mt-20 mb-10 underline decoration-red-500">Description</h2>
+          <h2 className="text-2xl font-semibold mt-20 mb-10 underline decoration-red-500 underline-offset-8">Description</h2>
           <div className="mt-10 mb-8 text-lg max-w-4xl mx-auto">
             {project.description.map((paragraph, index) => (
               <div key={index}>
@@ -116,7 +116,7 @@ export default function ProjectDetail() {
           </div>
 
           {/* Technologies Used */}
-          <h2 className="text-2xl font-semibold mt-20 mb-4 underline decoration-red-500">Technologies used</h2>
+          <h2 className="text-2xl font-semibold mt-20 mb-4 underline decoration-red-500 underline-offset-8">Technologies used</h2>
           <ul className="list-disc list-inside mb-8 list-none space-y-2">
             {project.technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
@@ -124,7 +124,7 @@ export default function ProjectDetail() {
           </ul>
 
           {/* Features */}
-          <h2 className="text-2xl font-semibold mt-20 mb-4 underline decoration-red-500">Features</h2>
+          <h2 className="text-2xl font-semibold mt-20 mb-4 underline decoration-red-500 underline-offset-8">Features</h2>
           <ul className="list-disc list-inside mb-8 list-none space-y-2">
             {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
