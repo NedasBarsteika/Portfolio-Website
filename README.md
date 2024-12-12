@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio website that introduces me, lists my skills and my personal projects.
+
+## 📌 About
+
+The website features modern design, form validation, serverless message sending with EmailJS. I designed the website in a way that would be scalable, as I can easily add another skill or project to the objects array, which would make it appear in the website. The main technologies I used were TypeScript, React and a CSS framework called Tailwind.
+
+## 🎯 Project features
+
+Modern design
+Animations
+Serverless email Sending with Emailjs
+Form validation
+CV downloading
+
+# 🔧 Technologies used
+
+TypeScript
+React
+Tailwind
 
 ## Available Scripts
 
