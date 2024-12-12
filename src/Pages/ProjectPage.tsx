@@ -14,7 +14,7 @@ const projectData = {
     image: "/images/competence-form.png",
     codeLink: "https://github.com/NedasBarsteika/Competence-form",
     technologies: ["React", "TypeScript", "Tailwind"],
-    features: ["Dynamic survey app", "Account management/registration", "Admin page", "Modern design", "Database keeping"],
+    features: ["Dynamic survey app", "Animations", "Account management/registration", "Admin page", "Modern design", "Database keeping"],
   },
   2: {
     title: "Hackathon (Turboline) Project - Video Translator",
@@ -45,12 +45,13 @@ const projectData = {
     description: [
       "Created a website that introduces me, lists my skills and my personal projects.",
       "The website features modern design, form validation, serverless message sending with EmailJS.",
+      "I designed the website in a way that would be scalable, as I can easily add another skill or project to the objects array, which would make it appear in the website.",
       "The main technologies I used were TypeScript, React and a CSS framework called Tailwind.",
     ],
     image: "/images/portfolio-website.png",
     codeLink: "https://github.com/NedasBarsteika/Portfolio-Website",
     technologies: ["TypeScript", "React", "Tailwind"],
-    features: ["Modern design", "Form validation", "Serverless message sending with EmailJS"],
+    features: ["Modern design", "Animations", "Form validation", "Serverless message sending with EmailJS"],
   },
 };
 
