@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import Button from "../components/ui/button";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -193,12 +193,12 @@ export default function Main() {
                     ].map((skill) => (
                         <div
                             key={skill}
-                            className="flex flex-col items-center justify-center p-5 border border-gray-600 rounded-lg hover:shadow-lg transition-shadow duration-300"
+                            className="flex flex-col items-center justify-center p-5 border border-gray-600 rounded-lg hover:shadow-lg transition-shadow duration-300 transform transition-transform duration-300 hover:scale-110"
                         >
                             <img
                                 src={`./images/${skill.toLowerCase()}.png`}
                                 alt={skill}
-                                className="h-16 w-16 mb-4 transform transition-transform duration-300 hover:scale-125"
+                                className="h-16 w-16 mb-4"
                             />
                             <p className="text-lg font-bold">{skill}</p>
                         </div>
@@ -211,9 +211,9 @@ export default function Main() {
                 <h2 className="text-4xl font-bold text-center underline decoration-red-500 mb-8">
                     Projects
                 </h2>
-                <div className="flex flex-col gap-12 max-w-5xl mx-auto mb-20">
+                <div className="flex flex-col gap-12 max-w-5xl mx-auto mb-20 space-y-5">
                     {Object.entries(projectData).map(([id, project]) => (
-                        <div key={id} className="flex flex-col md:flex-row items-center gap-6 border border-gray-600 rounded-lg p-6 hover:shadow-lg transition">
+                        <div key={id} className="flex flex-col md:flex-row items-center gap-6 border border-gray-600 rounded-lg p-6 hover:shadow-lg transform transition-transform duration-300 hover:scale-105">
                             <img
                                 src={project.image}
                                 alt={project.title}
