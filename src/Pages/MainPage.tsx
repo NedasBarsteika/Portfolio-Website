@@ -74,7 +74,7 @@ export default function Main() {
             {/* NAVBAR */}
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <a className="font-semibold" href="#">
+                    <a className="font-semibold" href="/">
                         NEDAS BARSTEIKA
                     </a>
                     <button
@@ -193,7 +193,7 @@ export default function Main() {
                     ].map((skill) => (
                         <div
                             key={skill}
-                            className="flex flex-col items-center justify-center p-5 border border-gray-600 rounded-lg hover:shadow-lg transition-shadow duration-300 transform transition-transform duration-300 hover:scale-110"
+                            className="flex flex-col items-center justify-center p-5 border border-gray-600 rounded-lg hover:shadow-lg transform transition-transform duration-300 hover:scale-110"
                         >
                             <img
                                 src={`./images/${skill.toLowerCase()}.png`}

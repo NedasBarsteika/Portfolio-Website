@@ -13,7 +13,7 @@ const projectData = {
     ],
     image: "/images/competence-form.png",
     codeLink: "https://github.com/NedasBarsteika/Competence-form",
-    technologies: ["React", "TypeScript", "Tailwind"],
+    technologies: ["TypeScript", "React", "Tailwind"],
     features: ["Dynamic survey app", "Animations", "Account management/registration", "Admin page", "Modern design", "Database keeping"],
   },
   2: {
@@ -117,7 +117,7 @@ export default function ProjectDetail() {
 
           {/* Technologies Used */}
           <h2 className="text-2xl font-semibold mt-20 mb-4 underline decoration-red-500 underline-offset-8">Technologies used</h2>
-          <ul className="list-disc list-inside mb-8 list-none space-y-2">
+          <ul className="list-inside mb-8 list-none space-y-2">
             {project.technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
@@ -125,7 +125,7 @@ export default function ProjectDetail() {
 
           {/* Features */}
           <h2 className="text-2xl font-semibold mt-20 mb-4 underline decoration-red-500 underline-offset-8">Features</h2>
-          <ul className="list-disc list-inside mb-8 list-none space-y-2">
+          <ul className="list-inside mb-8 list-none space-y-2">
             {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
