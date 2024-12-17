@@ -153,7 +153,7 @@ export default function Main() {
                     </h2>
                     <p className="text-xl italic">- Full-stack Developer -</p>
                     <div className="mt-5">
-                        <a className="bg-yellow-400 text-black px-5 py-2 rounded-lg mr-2 transform transition-transform duration-300 hover:scale-110 inline-block" href="/documents/CV_Nedas_Barsteika.pdf" download>CV</a>
+                        <a className="bg-yellow-400 text-black px-5 py-2 rounded-lg mr-2 transform transition-transform duration-300 hover:scale-110 inline-block" href="/documents/Nedas_Barsteika_CV.pdf" download>CV</a>
                         <Button title="Contact Me" link="#contact-me" />
                     </div>
                 </div>
