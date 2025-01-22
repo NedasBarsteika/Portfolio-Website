@@ -311,7 +311,7 @@ export default function Main() {
 
             {/* FOOTER */}
             <footer className="py-5 text-center bg-dark">
-                <p>© 2024 Nedas Barsteika - All Rights Reserved</p>
+                <p>© 2025 Nedas Barsteika - All Rights Reserved</p>
             </footer>
         </motion.div>
     );
