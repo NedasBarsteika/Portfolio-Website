@@ -134,7 +134,7 @@ export default function ProjectDetail() {
 
         {/* FOOTER */}
         <footer className="mt-20 py-5 text-center bg-dark">
-          <p>© 2024 Nedas Barsteika - All Rights Reserved</p>
+          <p>© 2025 Nedas Barsteika - All Rights Reserved</p>
         </footer>
       </div>
     </motion.div>
