@@ -1,3 +1,4 @@
+// @ts-ignore
 import './App.css';
 import { motion } from 'framer-motion';
 import MainPage from './Pages/MainPage';

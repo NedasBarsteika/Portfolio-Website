@@ -3,11 +3,14 @@
 @tailwind utilities;
 
 .App {
-  font-family: "Montserrat", serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
-  text-align: center;
-  background-color: #201E43;
-  color: white;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
 }
